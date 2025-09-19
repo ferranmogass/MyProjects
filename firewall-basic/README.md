@@ -36,7 +36,7 @@ Este proyecto se centra en **capa de red** para simplificar.
 
 firewall-basic/
 ├── firewall.py
-├── rules.json
+├── rules.json/
 └── README.md
 
 ### 2.1 `firewall.py`
