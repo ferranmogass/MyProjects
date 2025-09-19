@@ -1,0 +1,5 @@
+[
+    { "action": "ALLOW", "ip": "192.168.1.10", "port": 80, "protocol": "TCP" },
+    { "action": "DENY",  "ip": "10.0.0.0/24",  "port": 22, "protocol": "TCP" },
+    { "action": "ALLOW", "ip": "0.0.0.0/0",    "port": 53, "protocol": "UDP" }
+]
