@@ -28,7 +28,7 @@ def check_packet(packet, rules):
     for rule in rules: 
         if match_rule(packet, rule):   
             return rule['action']
-    return "ALLOW"  # Default action if no rules match
+    return "DENY"  # Default action if no rules match
 
 if __name__ == "__main__":
     rules = load_rules()

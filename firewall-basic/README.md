@@ -10,7 +10,7 @@ filtrar tráfico (simulado) en función de la **dirección IP**, el **puerto** y
 
 ---
 
-## 🧠 1. Teoría previa
+## 🧠 1. Teoría
 
 Un **firewall** (o cortafuegos) es una barrera de seguridad que:
 - Supervisa el tráfico de red entrante y saliente.
@@ -35,20 +35,19 @@ Este proyecto se centra en **capa de red** para simplificar.
 ## 🗂️ 2. Estructura del proyecto
 
 firewall-basic/
-|--- firewall.py #Código principal del firewall
-|--- rules.json #Reglas 
-|--- README.md
-
+├── firewall.py
+├── rules.json
+└── README.md
 
 ### 2.1 `firewall.py`
 - **Carga las reglas** desde `rules.json`.
-- **Recibe paquetes de prueba** (diccionarios en Python o desde `test_packets.json`).
+- **Recibe paquetes de prueba** (diccionarios en Python)
 - Comprueba cada paquete:
   - Dirección IP (acepta direcciones individuales o subredes en formato CIDR).
   - Puerto (número entero).
   - Protocolo (TCP o UDP).
 - Devuelve `ALLOW` o `DENY` según la primera regla que coincida.
-- Si no coincide ninguna, **permite el tráfico por defecto**.
+- Si no coincide ninguna, **NO permite el tráfico por defecto**.
 
 ### 2.2 `rules.json`
 Archivo en formato JSON que define las reglas del firewall.  
