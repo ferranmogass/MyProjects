@@ -4,13 +4,9 @@ Este proyecto implementa un **simulador de firewall** escrito en Python.
 Su objetivo es ilustrar el funcionamiento teórico de un cortafuegos:  
 filtrar tráfico (simulado) en función de la **dirección IP**, el **puerto** y el **protocolo**.
 
-> ⚠️ **Aviso importante**: Este proyecto es puramente educativo.  
-> No modifica las reglas de tu sistema operativo ni bloquea tráfico real.  
-> Su finalidad es **aprender** conceptos de redes y seguridad.
-
 ---
 
-## 🧠 1. Teoría previa
+## 🧠 1. Teoría 
 
 Un **firewall** (cortafuegos) es una barrera de seguridad que:
 - Supervisa el tráfico de red entrante y saliente.
