@@ -67,10 +67,9 @@ git clone https://github.com/<TU_USUARIO>/firewall-basic.git
 cd firewall-basic
 
 ## ▶️ 4. Ejecucción del programa 
-4.1 Ejecución básica 
+### 4.1 Ejecución básica 
 Ejecuta el firewall con los paquetes de prueba internos:
 python firewall.py run
-
 Salida esperada: 
 Paquete {'ip': '192.168.1.10', 'port': 80, 'protocol': 'TCP'} -> ALLOW
 Paquete {'ip': '10.0.0.5', 'port': 22, 'protocol': 'TCP'} -> DENY
@@ -78,17 +77,15 @@ Paquete {'ip': '8.8.8.8', 'port': 53, 'protocol': 'UDP'} -> ALLOW
 
 ## 🖥️ 5. Gestión de reglas desde CLI
 La principal mejora de esta versión es la **gestión dinámica de reglas** sin editar manualmente rules.json
-Listar reglas:
+### Listar reglas:
 python firewall.py list
+
 Muestra todas las reglas con su índice: 
 [0] ALLOW 192.168.1.10 Port:80 Protocol:TCP
 [1] DENY  10.0.0.0/24   Port:22 Protocol:TCP
-
-**Añadir una regla** 
+### Añadir una regla
 python firewall.py add ALLOW 192.168.1.50 443 TCP
-
-**Eliminar una regla** 
+### Eliminar una regla
 python firewall.py delete 0
-
-**Ejectuar comprobación de paquetes** 
+### Ejectuar comprobación de paquetes
 python firewall.py run
