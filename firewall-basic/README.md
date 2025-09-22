@@ -71,24 +71,35 @@ cd firewall-basic
 Ejecuta el firewall con los paquetes de prueba internos:
 ```json
     python firewall.py run
+```
 
 Salida esperada: 
 ```json
 Paquete {'ip': '192.168.1.10', 'port': 80, 'protocol': 'TCP'} -> ALLOW
 Paquete {'ip': '10.0.0.5', 'port': 22, 'protocol': 'TCP'} -> DENY
 Paquete {'ip': '8.8.8.8', 'port': 53, 'protocol': 'UDP'} -> ALLOW
+```
 
 ## 🖥️ 5. Gestión de reglas desde CLI
 La principal mejora de esta versión es la **gestión dinámica de reglas** sin editar manualmente rules.json
 ### Listar reglas:
+```json
 python firewall.py list
-
+```
 Muestra todas las reglas con su índice: 
+```json
 [0] ALLOW 192.168.1.10 Port:80 Protocol:TCP
 [1] DENY  10.0.0.0/24   Port:22 Protocol:TCP
+```
 ### Añadir una regla
+```json
 python firewall.py add ALLOW 192.168.1.50 443 TCP
+```
 ### Eliminar una regla
+```json
 python firewall.py delete 0
+```
 ### Ejectuar comprobación de paquetes
+```json
 python firewall.py run
+```
