@@ -69,8 +69,11 @@ cd firewall-basic
 ## ▶️ 4. Ejecucción del programa 
 ### 4.1 Ejecución básica 
 Ejecuta el firewall con los paquetes de prueba internos:
-python firewall.py run
+```json
+    python firewall.py run
+
 Salida esperada: 
+```json
 Paquete {'ip': '192.168.1.10', 'port': 80, 'protocol': 'TCP'} -> ALLOW
 Paquete {'ip': '10.0.0.5', 'port': 22, 'protocol': 'TCP'} -> DENY
 Paquete {'ip': '8.8.8.8', 'port': 53, 'protocol': 'UDP'} -> ALLOW
