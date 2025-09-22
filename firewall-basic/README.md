@@ -71,7 +71,7 @@ cd firewall-basic
 Ejecuta el firewall con los paquetes de prueba internos:
 ```json
     python firewall.py run
-```
+
 
 Salida esperada: 
 ```json
