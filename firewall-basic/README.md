@@ -83,9 +83,9 @@ Paquete {'ip': '8.8.8.8', 'port': 53, 'protocol': 'UDP'} -> ALLOW
 ## 🖥️ 5. Gestión de reglas desde CLI
 La principal mejora de esta versión es la **gestión dinámica de reglas** sin editar manualmente rules.json
 ### Listar reglas:
-```json
-python firewall.py list
-```
+  ```json
+  python firewall.py list
+
 Muestra todas las reglas con su índice: 
 ```json
 [0] ALLOW 192.168.1.10 Port:80 Protocol:TCP
