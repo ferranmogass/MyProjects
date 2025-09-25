@@ -17,12 +17,12 @@ Un **firewall** (cortafuegos) es una barrera de seguridad que:
 
 - **IP (Internet Protocol)**: Identificador único de cada dispositivo en una red.
 - **Puerto**: Punto lógico donde se comunican las aplicaciones (p. ej. 80 = HTTP).
-- **Protocolo**: Define cómo viaja la información (TCP, UDP, etc.).
+- **Protocolo**: Define cómo viaja la información (TCP, UDP, etc...).
 - **Reglas de filtrado**: Conjunto de condiciones que determinan si un paquete se acepta (`ALLOW`) o se bloquea (`DENY`).
 
 En un entorno real, un firewall puede operar en:
-- **Capa de red** (IP, puertos, protocolos)
-- **Capa de aplicación** (HTTP, DNS, etc.)
+- **Capa de red** (IP, puertos, protocolos).
+- **Capa de aplicación** (HTTP, DNS, etc.).
 
 Este proyecto se centra en la **capa de red** para simplificar.
 
@@ -40,7 +40,7 @@ firewall-basic/
 ### Archivos principales
 
 - **`firewall.py`**  
-  Código principal que:
+  Código principal:
   - Carga y guarda las reglas desde `rules.json`.
   - Comprueba paquetes de prueba contra las reglas.
   - Ofrece una **interfaz de línea de comandos (CLI)** para añadir, eliminar y listar reglas.
@@ -160,7 +160,7 @@ python firewall.py --help
 
 ## 📝 6. Ejemplos de uso completos
 
-### Escenario 1: Configuración de servidor web
+### Escenario 1: Configuración de servidor web.
 ```bash
 # 1. Ver reglas actuales
 python firewall.py list
@@ -195,43 +195,40 @@ python firewall.py list
 ## 🔧 7. Características técnicas
 
 ### Validaciones implementadas
-- **IPs válidas**: Acepta IPs individuales (`192.168.1.10`) y rangos CIDR (`192.168.1.0/24`)
-- **Puertos válidos**: Rango 0-65535
-- **Protocolos soportados**: TCP, UDP
-- **Acciones disponibles**: ALLOW, DENY
+- **IPs válidas**: Acepta IPs individuales (`192.168.1.10`) y rangos CIDR (`192.168.1.0/24`).
+- **Puertos válidos**: Rango 0-65535.
+- **Protocolos soportados**: TCP, UDP.
+- **Acciones disponibles**: ALLOW, DENY.
 
 ### Gestión de archivos
-- **Rutas absolutas**: El script funciona desde cualquier directorio
-- **Creación automática**: Si no existe `rules.json`, se crea automáticamente
-- **Formato JSON**: Datos estructurados y legibles
+- **Rutas absolutas**: El script funciona desde cualquier directorio.
+- **Formato JSON**: Datos estructurados y legibles.
 
 ### Manejo de errores
-- Validación de argumentos de entrada
-- Gestión de archivos corruptos o inexistentes
-- Mensajes de error descriptivos
+- Validación de argumentos de entrada.
+- Gestión de archivos corruptos o inexistentes.
+- Mensajes de error descriptivos.
 
 ---
 
 ## 🎯 8. Objetivos de aprendizaje
 
-Al completar este proyecto, habrás aprendido:
+Al completar este proyecto, he aprendido:
 
-1. **Conceptos de redes**: IPs, puertos, protocolos, subredes CIDR
-2. **Seguridad básica**: Funcionamiento de un firewall, reglas de filtrado
-3. **Python**: Manejo de JSON, validación de datos, CLI con `argparse`
-4. **Gestión de archivos**: Lectura/escritura, rutas absolutas y relativas
-5. **Debugging**: Manejo de errores y validaciones
+1. **Conceptos de redes**: IPs, puertos, protocolos, subredes CIDR.
+2. **Seguridad básica**: Funcionamiento de un firewall, reglas de filtrado.
+3. **Python**: Manejo de JSON, validación de datos, CLI con `argparse`.
+4. **Debugging**: Manejo de errores y validaciones.
 
 ---
 
 ## 🚀 9. Posibles mejoras
 
-- [ ] Soporte para rangos de puertos (`80-8080`)
-- [ ] Reglas por fecha/hora
-- [ ] Logging de eventos
-- [ ] Interfaz web con Flask
-- [ ] Importar/exportar reglas en otros formatos
-- [ ] Estadísticas de tráfico bloqueado/permitido
+- [ ] Soporte para rangos de puertos (`80-8080`).
+- [ ] Reglas por fecha/hora.
+- [ ] Logging de eventos.
+- [ ] Importar/exportar reglas en otros formatos.
+- [ ] Estadísticas de tráfico bloqueado/permitido.
 
 ---
 
